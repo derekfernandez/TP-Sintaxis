@@ -135,7 +135,20 @@ extern int yydebug;
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+typedef union /* Line 387 of yacc.c  */
+#line 6 "bison.y"
+rutinas
+{
+/* Line 387 of yacc.c  */
+#line 6 "bison.y"
+
+	int intval;
+	char *id;
+
+
+/* Line 387 of yacc.c  */
+#line 151 "y.tab.c"
+} YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -162,7 +175,7 @@ int yyparse ();
 /* Copy the second part of user declarations.  */
 
 /* Line 390 of yacc.c  */
-#line 166 "y.tab.c"
+#line 179 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -437,26 +450,25 @@ static const yytype_uint8 yytranslate[] =
    YYRHS.  */
 static const yytype_uint8 yyprhs[] =
 {
-       0,     0,     3,     7,     9,    12,    17,    23,    29,    31,
-      35,    39,    41,    43,    47
+       0,     0,     3,     7,     8,    11,    16,    22,    28,    30,
+      34,    38,    40,    42,    46
 };
 
 /* YYRHS -- A `-1'-separated list of the rules' RHS.  */
 static const yytype_int8 yyrhs[] =
 {
-      16,     0,    -1,     3,    17,     4,    -1,    18,    -1,    18,
-      17,    -1,     8,     7,    19,    11,    -1,     5,    12,    22,
-      13,    11,    -1,     6,    12,    20,    13,    11,    -1,    21,
-      -1,    21,     9,    21,    -1,    19,    14,    19,    -1,     8,
-      -1,    10,    -1,    12,    19,    13,    -1,     8,    14,     8,
-      -1
+      16,     0,    -1,     3,    17,     4,    -1,    -1,    18,    17,
+      -1,     8,     7,    19,    11,    -1,     5,    12,    22,    13,
+      11,    -1,     6,    12,    20,    13,    11,    -1,    21,    -1,
+      21,     9,    21,    -1,    19,    14,    19,    -1,     8,    -1,
+      10,    -1,    12,    19,    13,    -1,     8,    14,     8,    -1
 };
 
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    22,    22,    25,    26,    29,    30,    31,    34,    35,
-      38,    41,    42,    43,    46
+       0,    27,    27,    30,    31,    34,    35,    36,    39,    40,
+      43,    46,    47,    48,    51
 };
 #endif
 
@@ -493,7 +505,7 @@ static const yytype_uint8 yyr1[] =
 /* YYR2[YYN] -- Number of symbols composing right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
-       0,     2,     3,     1,     2,     4,     5,     5,     1,     3,
+       0,     2,     3,     0,     2,     4,     5,     5,     1,     3,
        3,     1,     1,     3,     3
 };
 
@@ -502,7 +514,7 @@ static const yytype_uint8 yyr2[] =
    means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,     0,     0,     0,     0,     0,     0,     3,     1,     0,
+       0,     3,     0,     0,     0,     0,     0,     3,     1,     0,
        0,     0,     2,     4,     0,     0,    11,    12,     0,     0,
        0,     8,     0,     0,     0,     0,     0,     0,     0,     5,
       14,     6,    13,    10,     7,     9
@@ -1364,7 +1376,7 @@ yyreduce:
     {
       
 /* Line 1792 of yacc.c  */
-#line 1368 "y.tab.c"
+#line 1380 "y.tab.c"
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1596,7 +1608,7 @@ yyreturn:
 
 
 /* Line 2055 of yacc.c  */
-#line 48 "bison.y"
+#line 53 "bison.y"
 
 
 main() {

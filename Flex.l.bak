@@ -14,8 +14,7 @@ asignacion                       :=
 
 %%
 
-"inicio"								return is
-INICIO;
+"inicio"								return INICIO;
 "fin"									return FIN;
 "leer"									return LEER;
 "escribir"								return ESCRIBIR;
@@ -28,6 +27,6 @@ INICIO;
 ";"									return PUNTOYCOMA;
 ","									return CARACTERLISTA;
 [ /t/n]									;
-.									printf("ERROR\t");
+.									return ERRORLEXICO;
 
 %%

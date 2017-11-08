@@ -3,14 +3,19 @@
 	#include <stdio.h>
 %}
 
+%union rutinas {
+	int intval;
+	char *id;
+}
+
 %token INICIO       
 %token FIN
 %token LEER
 %token ESCRIBIR
 %token ASIGNACION
-%token IDENTIFICADOR
+%token <id> IDENTIFICADOR
 %token OPERADOR
-%token CONSTANTE
+%token <intval> CONSTANTE
 %token PUNTOYCOMA
 %token PARENABIERTO
 %token PARENCERRADO
@@ -19,14 +24,14 @@
 
 %%
 
-programa: #comenzar INICIO sentencias FIN
+programa: INICIO sentencias FIN
 ;
 
-sentencias: sentencia
+sentencias: /* vacio */
           | sentencia sentencias
 ;
 
-sentencia: IDENTIFICADOR ASIGNACION expresion PUNTOYCOMA #asignar
+sentencia: IDENTIFICADOR ASIGNACION expresion PUNTOYCOMA 
          | LEER PARENABIERTO identificadores PARENCERRADO PUNTOYCOMA
          | ESCRIBIR PARENABIERTO expresiones PARENCERRADO PUNTOYCOMA
 ;
