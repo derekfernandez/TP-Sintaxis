@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+#define TAM 1000
+
+
+FILE *F = NULL;
+
+void comienzoDePrograma();
+bool leerInicio();
+void leerListaDeSentencias();
+void leerUnaSentencia()
+void finDePrograma();
+bool leerFin();
+
+int main(int argc, char*argv[])
+{
+    if(argc != 2)
+        printf("numero incorrecto de archivos")
+
+    if(F = fopen(argv[1], "r"))
+    {
+        comienzoDePrograma();
+    }
+
+}
+
+void comienzoDePrograma()
+{
+    if(leerInicio())
+    {
+        leerListaDeSentencias();
+    }
+    else
+    {
+        printf("error sintactico");
+    }
+}
+
+bool leerInicio()
+{
+    if()
+        return true;
+
+    return false;
+}
+
+void leerListaDeSentencias()
+{
+    while(F != EOF)
+    {
+        leerUnaSentecia();
+    }
+
+    finDePrograma();
+}
+
+void finDePrograma()
+{
+    if(leerFin())
+    {
+        printf("programa compilado correctamente");
+    }
+    else
+    {
+        printf("error sintactico");
+    }
+
+    fclose(F);
+
+}
+
+bool leerFin()
+{
+    if()
+        return true;
+
+    return false;
+}
