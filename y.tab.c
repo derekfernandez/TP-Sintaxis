@@ -63,7 +63,7 @@
 
 /* Copy the first part of user declarations.  */
 /* Line 371 of yacc.c  */
-#line 2 "bison.y"
+#line 3 "bison.y"
 
 	#include <stdio.h>
 
@@ -135,20 +135,7 @@ extern int yydebug;
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union /* Line 387 of yacc.c  */
-#line 6 "bison.y"
-rutinas
-{
-/* Line 387 of yacc.c  */
-#line 6 "bison.y"
-
-	int intval;
-	char *id;
-
-
-/* Line 387 of yacc.c  */
-#line 151 "y.tab.c"
-} YYSTYPE;
+typedef int YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -175,7 +162,7 @@ int yyparse ();
 /* Copy the second part of user declarations.  */
 
 /* Line 390 of yacc.c  */
-#line 179 "y.tab.c"
+#line 166 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -467,8 +454,8 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    27,    27,    30,    31,    34,    35,    36,    39,    40,
-      43,    46,    47,    48,    51
+       0,    23,    23,    26,    27,    30,    31,    32,    35,    36,
+      39,    42,    43,    44,    47
 };
 #endif
 
@@ -1376,7 +1363,7 @@ yyreduce:
     {
       
 /* Line 1792 of yacc.c  */
-#line 1380 "y.tab.c"
+#line 1367 "y.tab.c"
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1608,7 +1595,7 @@ yyreturn:
 
 
 /* Line 2055 of yacc.c  */
-#line 53 "bison.y"
+#line 49 "bison.y"
 
 
 main() {
@@ -1617,6 +1604,6 @@ main() {
 	}
 
 yyerror(char* mensaje) {
-	printf("\nAnalisis suspendido\n");
-	printf("\nMensaje: %s",mensaje);
+	printf("\nAnalisis erroneo\n");
+	printf("\nError Encontrado: %s",mensaje);
 	}

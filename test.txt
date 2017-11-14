@@ -1,6 +1,0 @@
-inicio
-a:=340;
-leer(a,b);
-escribir(a,(b+402));
-a:=b;
-fin

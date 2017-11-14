@@ -387,8 +387,8 @@ static char *yy_last_accepting_cpos;
 char *yytext;
 #line 1 "Flex.l"
 #define INITIAL 0
-#line 2 "Flex.l"
-    
+/*Scanner*/
+#line 4 "Flex.l"
     #include <stdio.h>
     #include "y.tab.h"
 #line 395 "lex.yy.c"
@@ -542,7 +542,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 15 "Flex.l"
+#line 16 "Flex.l"
 
 
 #line 549 "lex.yy.c"
@@ -630,77 +630,77 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 17 "Flex.l"
+#line 18 "Flex.l"
 return INICIO;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 18 "Flex.l"
+#line 19 "Flex.l"
 return FIN;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 19 "Flex.l"
+#line 20 "Flex.l"
 return LEER;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 20 "Flex.l"
+#line 21 "Flex.l"
 return ESCRIBIR;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 21 "Flex.l"
+#line 22 "Flex.l"
 return IDENTIFICADOR;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 22 "Flex.l"
+#line 23 "Flex.l"
 return CONSTANTE;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 23 "Flex.l"
+#line 24 "Flex.l"
 return OPERADOR;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 24 "Flex.l"
+#line 25 "Flex.l"
 return ASIGNACION;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 25 "Flex.l"
+#line 26 "Flex.l"
 return PARENABIERTO;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 26 "Flex.l"
+#line 27 "Flex.l"
 return PARENCERRADO;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 27 "Flex.l"
+#line 28 "Flex.l"
 return PUNTOYCOMA;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 28 "Flex.l"
+#line 29 "Flex.l"
 return CARACTERLISTA;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 29 "Flex.l"
+#line 30 "Flex.l"
 ;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 30 "Flex.l"
-printf("ERROR\t");
+#line 31 "Flex.l"
+printf("Error Lexico\t");
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 32 "Flex.l"
+#line 33 "Flex.l"
 ECHO;
 	YY_BREAK
 #line 707 "lex.yy.c"
@@ -1589,5 +1589,5 @@ int main()
 	return 0;
 	}
 #endif
-#line 32 "Flex.l"
+#line 33 "Flex.l"
 

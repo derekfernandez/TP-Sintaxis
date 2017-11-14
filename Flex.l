@@ -1,5 +1,6 @@
-%{
-    
+/*Scanner*/
+
+%{  
     #include <stdio.h>
     #include "y.tab.h"
 %}
@@ -27,6 +28,6 @@ asignacion                       :=
 ";"									return PUNTOYCOMA;
 ","									return CARACTERLISTA;
 [ /t/n]									;
-.									printf("ERROR\t");
+.									printf("Error Lexico\t");
 
 %%

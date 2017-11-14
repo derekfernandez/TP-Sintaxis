@@ -1,21 +1,17 @@
+/*Parser*/
 
 %{
 	#include <stdio.h>
 %}
-
-%union rutinas {
-	int intval;
-	char *id;
-}
 
 %token INICIO       
 %token FIN
 %token LEER
 %token ESCRIBIR
 %token ASIGNACION
-%token <id> IDENTIFICADOR
+%token IDENTIFICADOR
 %token OPERADOR
-%token <intval> CONSTANTE
+%token CONSTANTE
 %token PUNTOYCOMA
 %token PARENABIERTO
 %token PARENCERRADO
@@ -58,6 +54,6 @@ main() {
 	}
 
 yyerror(char* mensaje) {
-	printf("\nAnalisis suspendido\n");
-	printf("\nMensaje: %s",mensaje);
+	printf("\nAnalisis erroneo\n");
+	printf("\nError Encontrado: %s",mensaje);
 	}
