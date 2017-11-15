@@ -62,5 +62,10 @@ main() {
 
 yyerror(char* mensaje) {
 	printf("\nAnalisis erroneo\n");
+	if(mensaje == "Error Lexico") {
+		printf("\nError Encontrado: %s",mensaje);
+		}
+	else {
 	printf("\nError Encontrado: %s",mensaje);
 	}
+}

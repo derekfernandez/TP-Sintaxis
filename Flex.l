@@ -28,6 +28,6 @@ asignacion                       :=
 ";"									return PUNTOYCOMA;
 ","									return CARACTERLISTA;
 [ /t/n]									;
-.									printf("Error Lexico\t");
+.									return ERRORLEXICO;
 
 %%

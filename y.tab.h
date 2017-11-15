@@ -57,7 +57,8 @@ extern int yydebug;
      PUNTOYCOMA = 266,
      PARENABIERTO = 267,
      PARENCERRADO = 268,
-     CARACTERLISTA = 269
+     CARACTERLISTA = 269,
+     ERRORLEXICO = 270
    };
 #endif
 /* Tokens.  */
@@ -73,6 +74,7 @@ extern int yydebug;
 #define PARENABIERTO 267
 #define PARENCERRADO 268
 #define CARACTERLISTA 269
+#define ERRORLEXICO 270
 
 
 
