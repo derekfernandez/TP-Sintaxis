@@ -6,6 +6,7 @@
 %}
 
 %option noyywrap
+%option yylineno
 
 palabrasReservadas               [inicio-fin-leer-escribir]
 digito                           [0-9]

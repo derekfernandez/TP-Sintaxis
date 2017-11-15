@@ -6,8 +6,9 @@
 %}
 
 %option noyywrap
+%option yylineno
 
-palabraReservada               [inicio-fin-leer-escribir]
+palabrasReservadas               [inicio-fin-leer-escribir]
 digito                           [0-9]
 operador                         [+-]
 caracter                         [a-zA-Z]
@@ -28,6 +29,6 @@ asignacion                       :=
 ";"									return PUNTOYCOMA;
 ","									return CARACTERLISTA;
 [ /t/n]									;
-.
+{ID									return ERRORLEXICO;
 
 %%

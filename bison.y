@@ -50,17 +50,20 @@ expresionPrimaria: IDENTIFICADOR
 
 identificadores: IDENTIFICADOR CARACTERLISTA IDENTIFICADOR
 	| IDENTIFICADOR CARACTERLISTA ERRORLEXICO {yyerror("Error Lexico");YYABORT;}
-	| ERRORLEXICO {yyerror("Error Lexico");YYABORT;} CARACTERLISTA IDENTIFICADOR
+	| ERRORLEXICO {yyerror("Error Lexico");YYABORT;}
 ;
 
 %%
+
+extern int yylineno;
+
+yyerror(char* mensaje) {
+	printf("\nAnalisis erroneo\n");
+	printf("\nError Encontrado: %s en linea: %d\n",mensaje,yylineno);
+	}
 
 main() {
 	if (yyparse() ==0)
 	printf ("\nAnalisis concluido sin errores\n");
 	}
 
-yyerror(char* mensaje) {
-	printf("\nAnalisis erroneo\n");
-	printf("\nError Encontrado: %s",mensaje);
-	}
